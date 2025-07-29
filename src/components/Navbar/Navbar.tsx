@@ -4,9 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    return pathname === path;
+  };
 
   return (
     <nav className="w-full flex justify-center border-b bg-white/50 backdrop-blur-md fixed top-0 z-50 py-[16px] px-[40px]">
@@ -20,24 +26,43 @@ const Navbar = () => {
             width={120}
             height={120}
           />
-
         </Link>
 
         {/* Navigation Links - Desktop */}
         <div className="hidden lg:flex items-center gap-[36px]">
-          <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/"
+            className={`text-sm transition-colors hover:text-primary ${isActive('/') ? 'font-bold' : 'font-medium'
+              }`}
+          >
             HOME
           </Link>
-          <Link href="/ai-portfolio" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/ai-portfolio"
+            className={`text-sm transition-colors hover:text-primary ${isActive('/ai-portfolio') ? 'font-bold' : 'font-medium'
+              }`}
+          >
             AI PORTFOLIO
           </Link>
-          <Link href="/acquisitions" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/acquisitions"
+            className={`text-sm transition-colors hover:text-primary ${isActive('/acquisitions') ? 'font-bold' : 'font-medium'
+              }`}
+          >
             ACQUISITIONS
           </Link>
-          <Link href="/investors" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/investors"
+            className={`text-sm transition-colors hover:text-primary ${isActive('/investors') ? 'font-bold' : 'font-medium'
+              }`}
+          >
             INVESTORS
           </Link>
-          <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/about"
+            className={`text-sm transition-colors hover:text-primary ${isActive('/about') ? 'font-bold' : 'font-medium'
+              }`}
+          >
             ABOUT
           </Link>
         </div>
@@ -89,42 +114,48 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className={`text-sm transition-colors hover:text-primary ${isActive('/') ? 'font-bold' : 'font-medium'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 HOME
               </Link>
               <Link
                 href="/ai-portfolio"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className={`text-sm transition-colors hover:text-primary ${isActive('/ai-portfolio') ? 'font-bold' : 'font-medium'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 AI PORTFOLIO
               </Link>
               <Link
                 href="/acquisitions"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className={`text-sm transition-colors hover:text-primary ${isActive('/acquisitions') ? 'font-bold' : 'font-medium'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 ACQUISITIONS
               </Link>
               <Link
                 href="/investors"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className={`text-sm transition-colors hover:text-primary ${isActive('/investors') ? 'font-bold' : 'font-medium'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 INVESTORS
               </Link>
               <Link
                 href="/about"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className={`text-sm transition-colors hover:text-primary ${isActive('/about') ? 'font-bold' : 'font-medium'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 ABOUT
               </Link>
               <Link
                 href="/contact"
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className={`text-sm transition-colors hover:text-primary ${isActive('/contact') ? 'font-bold' : 'font-medium'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 CONTACT US
