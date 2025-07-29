@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { AlignJustify, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
