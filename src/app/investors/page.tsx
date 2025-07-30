@@ -3,7 +3,6 @@ import ReadyToConnect from "@/components/Home/ReadyToConncet/ReadyToConnect";
 import Description from "@/components/Investors/Description/Description";
 import News from "@/components/Investors/News/News";
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
 
 const Investors = () => {
   return (

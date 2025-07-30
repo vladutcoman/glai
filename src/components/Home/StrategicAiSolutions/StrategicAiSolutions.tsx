@@ -1,4 +1,3 @@
-import PageTitle from '@/components/common/PageTitle/PageTitle';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 

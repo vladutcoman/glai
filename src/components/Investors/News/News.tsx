@@ -33,7 +33,7 @@ const News = () => {
       <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-4">
           <h2 className="text-sm uppercase tracking-wider text-gray-500">
-            EXPLORE GLOBAL AI'S RESOURCES FOR INVESTORS
+            EXPLORE GLOBAL AI&apos;S RESOURCES FOR INVESTORS
           </h2>
           <div className="text-[56px] font-[500] leading-[120%] font-aeonik">
             News <span className="font-playfair-display italic">& Resources</span>

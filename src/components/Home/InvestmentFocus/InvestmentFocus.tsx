@@ -1,4 +1,3 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import styles from "./InvestmentFocus.module.css";
 import Image from "next/image";
 

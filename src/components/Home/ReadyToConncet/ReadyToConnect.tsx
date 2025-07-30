@@ -22,7 +22,7 @@ const ReadyToConnect = () => {
               Ready To <span className="italic">Connect</span>?
             </h2>
             <p className="text-gray-300 text-lg">
-              Whether you're an investor, potential acquisition target, or customer, we'd love to hear from you.
+              Whether you&apos;re an investor, potential acquisition target, or customer, we&apos;d love to hear from you.
             </p>
           </div>
 

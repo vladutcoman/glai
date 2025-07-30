@@ -29,9 +29,9 @@ const FullPotential = () => {
       <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-4">
           <h2 className="text-sm uppercase tracking-wider text-gray-500">
-            UNLEASH YOUR AI VENTURE'S FULL POTENTIAL WITH GLOBAL AI:
+            UNLEASH YOUR AI VENTURE&apos;S FULL POTENTIAL WITH GLOBAL AI:
           </h2>
-          <div className="text-[56px] font-[500] leading-[120%] font-aeonik max-w-[900px]">
+          <div className="text-[56px] font-[500] leading-[120%] font-aeonik">
             Where <span className="font-playfair-display italic">Visionaries Thrive</span> and{' '}
             <span className="font-playfair-display italic">Innovations Soar</span>
           </div>

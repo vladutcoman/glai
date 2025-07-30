@@ -50,7 +50,7 @@ const Process = () => {
                 Ready To <span className="italic font-playfair-display">Connect</span>?
               </h2>
               <p className="text-gray-300 text-lg">
-                Whether you're an investor, potential acquisition target, or customer, we'd love to hear from you.
+                Whether you&apos;re an investor, potential acquisition target, or customer, we&apos;d love to hear from you.
               </p>
             </div>
 
@@ -72,7 +72,7 @@ const Process = () => {
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <h2 className="text-4xl text-white">
-              Global AI's <span className="italic font-playfair-display">Precision-Driven</span>
+              Global AI&apos;s <span className="italic font-playfair-display">Precision-Driven</span>
               <br />
               Acquisition Process
             </h2>
