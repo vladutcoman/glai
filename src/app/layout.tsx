@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-transparent">
+          {/* <div className="absolute top-32 right-0 w-[50%] h-[600px]">
+            <Image
+              src="/investors-1.svg"
+              alt="AI Brain Illustration"
+              fill
+              className="object-contain object-right"
+              priority
+            />
+          </div> */}
           <Navbar />
           {children}
           <Footer />
