@@ -1,4 +1,8 @@
 import PageTitle from "@/components/common/PageTitle/PageTitle";
+import InvestmentFocus from "@/components/Home/InvestmentFocus/InvestmentFocus";
+import ReadyToConnect from "@/components/Home/ReadyToConncet/ReadyToConnect";
+import StrategicAiSolutions from "@/components/Home/StrategicAiSolutions/StrategicAiSolutions";
+import WhyGlobal from "@/components/Home/WhyGlobal/WhyGlobal";
 import Image from "next/image";
 
 export default function Home() {
@@ -25,6 +29,10 @@ export default function Home() {
             priority
           />
         </div>
+        <InvestmentFocus />
+        <StrategicAiSolutions />
+        <WhyGlobal />
+        <ReadyToConnect />
       </div>
     </main>
   );
