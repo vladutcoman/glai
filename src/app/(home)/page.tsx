@@ -11,7 +11,7 @@ export default function Home() {
       <div className="px-4 flex flex-col gap-[64px]">
         <PageTitle
           title={
-            <h1 className="text-[72px] font-[500] leading-[130%] font-aeonik">
+            <h1 className="text-[64px] font-[500] leading-[130%] font-aeonik">
               Strategic{" "}
               <span className="font-playfair-display italic">AI Acquisitions</span>
               <br />
