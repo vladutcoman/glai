@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const ReadyToConnect = () => {
   return (
-    <section className="w-full relative overflow-hidden rounded-[32px] my-24">
+    <section className="w-full relative overflow-hidden rounded-[32px] mt-24">
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="/home-9.svg"

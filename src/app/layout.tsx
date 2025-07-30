@@ -28,20 +28,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-transparent">
-          {/* <div className="absolute top-32 right-0 w-[50%] h-[600px]">
+        <div className="min-h-screen flex flex-col relative">
+          <div className="absolute inset-0 w-full h-full -z-10">
             <Image
-              src="/investors-1.svg"
-              alt="AI Brain Illustration"
+              src="/bg.png"
+              alt="Background Pattern"
               fill
-              className="object-contain object-right"
+              className="object-cover"
               priority
+              quality={100}
             />
-          </div> */}
+          </div>
           <Navbar />
           {children}
-          <Footer />
         </div>
+        <Footer />
       </body>
     </html>
   );

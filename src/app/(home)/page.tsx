@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex-1 container mx-auto pt-24">
+    <main className="flex-1 container mx-auto pt-24 mb-24">
       <div className="px-4 flex flex-col gap-[64px]">
         <PageTitle
           title={

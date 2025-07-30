@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 
 const AiPortfolio = () => {
   return (
-    <main className="flex-1 container mx-auto pt-24">
+    <main className="flex-1 container mx-auto pt-24 mb-24">
       <div className="px-4 flex flex-col gap-[64px]">
         <PageTitle
           title={
