@@ -3,11 +3,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "lucide-react";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const isActive = (path: string) => {
@@ -23,6 +27,15 @@ const Navbar = () => {
       ${isActive(path) ? 'after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100'}
     `;
   };
+
+  const mobileLinks = [
+    { href: "/", label: "HOME" },
+    { href: "/ai-portfolio", label: "AI PORTFOLIO" },
+    { href: "/acquisitions", label: "ACQUISITIONS" },
+    { href: "/investors", label: "INVESTORS" },
+    { href: "/about", label: "ABOUT" },
+    { href: "/contact", label: "CONTACT US" },
+  ];
 
   return (
     <nav className="w-full flex justify-center border-b bg-white/50 backdrop-blur-md fixed top-0 z-50 py-[16px] px-[40px]">
@@ -80,74 +93,35 @@ const Navbar = () => {
             </Link>
           </Button>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            className="lg:hidden"
-            size="icon"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <Menu strokeWidth={2.5} className="h-6 w-6" />
-            <span className="sr-only">Open menu</span>
-          </Button>
+          {/* Mobile Menu Sheet */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                className="lg:hidden"
+                size="icon"
+              >
+                <Menu strokeWidth={2.5} className="h-6 w-6" />
+                <span className="sr-only">Open menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] px-6">
+              <SheetTitle className="text-left">Navigation Menu</SheetTitle>
+              <div className="flex flex-col space-y-4 mt-8">
+                {mobileLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`${linkStyles(link.href)} text-lg`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
-
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden">
-          <div
-            className="fixed inset-0 top-[64px] z-50 bg-background/80 backdrop-blur-sm animate-in fade-in-0"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-          <div className="fixed inset-x-4 top-[64px] z-50 rounded-lg bg-white p-6 shadow-lg animate-in fade-in-0 zoom-in-95">
-            <div className="flex flex-col space-y-4">
-              <Link
-                href="/"
-                className={linkStyles('/')}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                HOME
-              </Link>
-              <Link
-                href="/ai-portfolio"
-                className={linkStyles('/ai-portfolio')}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                AI PORTFOLIO
-              </Link>
-              <Link
-                href="/acquisitions"
-                className={linkStyles('/acquisitions')}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                ACQUISITIONS
-              </Link>
-              <Link
-                href="/investors"
-                className={linkStyles('/investors')}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                INVESTORS
-              </Link>
-              <Link
-                href="/about"
-                className={linkStyles('/about')}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                ABOUT
-              </Link>
-              <Link
-                href="/contact"
-                className={linkStyles('/contact')}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                CONTACT US
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };

@@ -4,7 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 const ContactForm = () => {
   return (
-    <section className="w-full blur-lg">
+    <section className="w-full">
       <div className="bg-[#1f598d14] rounded-2xl p-12">
         <div className="flex flex-col gap-12">
           <h2 className="text-[40px] font-[500] leading-[120%] font-aeonik max-w-[700px]">
